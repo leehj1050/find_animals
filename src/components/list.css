@@ -1,0 +1,23 @@
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.flexBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 1em;
+}
+.item {
+  min-width: 300px;
+  min-height: 400px;
+  flex-basis: 150px;
+  flex-grow: 1;
+  border-radius: 30px;
+  text-align: center;
+  border: 1px solid black;
+}
+.item img {
+  width: 80%;
+  height: 65%;
+}
