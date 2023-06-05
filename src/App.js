@@ -2,7 +2,7 @@ import { Home } from "./components/home";
 import { Header } from "./components/header";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { List } from "./components/list";
+import Detail from "./components/detail";
 
 function App() {
   const [getApi, setGetApi] = useState([]);
@@ -23,6 +23,7 @@ function App() {
       <Home getApi={getApi} />
       <Routes>
         <Route exact path="/" component={<Home />} />
+        <Route path="/detail" component={<Detail />} />
       </Routes>
     </Router>
   );
