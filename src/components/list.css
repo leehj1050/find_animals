@@ -17,17 +17,34 @@
   text-align: center;
   border: 1px solid black;
 }
-.itemBox img {
+img {
   width: 80%;
   height: 250px;
   background-size: cover;
 }
 
-.itemBox ul {
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 a {
   text-decoration: none;
+  color: black;
+}
+ul li:last-child p {
+  font-size: 1.5em;
+}
+.success {
+  color: blue;
+}
+.wait {
+  color: red;
+}
+
+/*
+detailImg
+*/
+.detailImg {
+  height: 60%;
 }

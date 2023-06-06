@@ -3,13 +3,13 @@ import "./list.css";
 import { Link } from "react-router-dom";
 
 export const List = ({ getApi }) => {
-  // console.log(getApi);
+  console.log(getApi);
   return (
     <div className="content">
       <div className="flexBox">
-        {getApi.map((i) => {
+        {getApi.map((i, idx) => {
           return (
-            <Link className="itemBox" to={"/detail"}>
+            <Link className="itemBox" to={`/detail/${i.ty3Date}`}>
               <ul>
                 <li>
                   <h2>{i.ty3Kind}</h2>
@@ -28,6 +28,15 @@ export const List = ({ getApi }) => {
                 </li>
                 <li>
                   <p>포획장소: {i.ty3Place}</p>
+                </li>
+                <li>
+                  <p
+                    className={
+                      i.ty3Process.indexOf("완료") > -1 ? "success" : "wait"
+                    }
+                  >
+                    {i.ty3Process}
+                  </p>
                 </li>
               </ul>
             </Link>
