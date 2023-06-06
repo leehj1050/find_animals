@@ -1,33 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./list.css";
 import { Link } from "react-router-dom";
 
 export const List = ({ getApi }) => {
-  console.log(getApi);
+  // console.log(getApi);
   return (
     <div className="content">
       <div className="flexBox">
-        {getApi.map((item) => {
+        {getApi.map((i) => {
           return (
-            <Link className="item" to={"/detail"}>
+            <Link className="itemBox" to={"/detail"}>
               <ul>
                 <li>
-                  <h2>{item.ty3Kind}</h2>
+                  <h2>{i.ty3Kind}</h2>
                 </li>
                 <li>
-                  <img src={item.ty3Picture} />
+                  <img src={i.ty3Picture} />
                 </li>
                 <li>
-                  <p>구조정보: {item.sj}</p>
+                  <p>구조정보: {i.sj}</p>
                 </li>
                 <li>
-                  <p>성별: {item.ty3Sex}</p>
+                  <p>성별: {i.ty3Sex}</p>
                 </li>
                 <li>
-                  <p>포획일시: {item.ty3Date}</p>
+                  <p>포획일시: {i.ty3Date}</p>
                 </li>
                 <li>
-                  <p>포획장소: {item.ty3Place}</p>
+                  <p>포획장소: {i.ty3Place}</p>
                 </li>
               </ul>
             </Link>
