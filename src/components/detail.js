@@ -16,7 +16,11 @@ function Detail({ getApi }) {
               <h2>{data.ty3Kind}</h2>
             </li>
             <li>
-              <img src={data.ty3Picture} className="detailImg" />
+              <img
+                src={data.ty3Picture}
+                className="detailImg"
+                alt="detailImg"
+              />
             </li>
             <li>
               <h2>내용: {data.cn}</h2>

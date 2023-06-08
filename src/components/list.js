@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import "./list.css";
 import { Link } from "react-router-dom";
 
@@ -7,7 +6,7 @@ export const List = ({ getApi }) => {
   return (
     <div className="content">
       <div className="flexBox">
-        {getApi.map((i, idx) => {
+        {getApi.map((i) => {
           return (
             <Link className="itemBox" to={`/detail/${i.ty3Date}`}>
               <ul>
@@ -15,7 +14,7 @@ export const List = ({ getApi }) => {
                   <h2>{i.ty3Kind}</h2>
                 </li>
                 <li>
-                  <img src={i.ty3Picture} />
+                  <img src={i.ty3Picture} alt="listImg" />
                 </li>
                 <li>
                   <p>구조정보: {i.sj}</p>
