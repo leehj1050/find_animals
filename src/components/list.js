@@ -2,7 +2,7 @@ import "./list.css";
 import { Link } from "react-router-dom";
 
 export const List = ({ getApi }) => {
-  console.log(getApi);
+  // console.log(getApi);
   return (
     <div className="content">
       <div className="flexBox">
