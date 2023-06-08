@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./list.css";
 
@@ -6,6 +6,10 @@ function Detail({ getApi }) {
   const { id } = useParams();
   const result = getApi.filter((i) => i.ty3Date === id);
   // console.log("result", result);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <>

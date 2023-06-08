@@ -38,7 +38,10 @@ export const PageNation = ({
       {pageNumbers.slice(startPage - 1, endPage).map((pageNumber) => (
         <li
           key={pageNumber}
-          onClick={() => onPageChange(pageNumber)}
+          onClick={() => {
+            onPageChange(pageNumber);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className={pageNumber === currentPage ? "active" : ""}
         >
           {pageNumber}
