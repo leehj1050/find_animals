@@ -12,7 +12,7 @@ function App() {
   //getApi
   useEffect(() => {
     fetch(
-      `http://apis.data.go.kr/6260000/BusanPetAnimalInfoService/getPetAnimalInfo?serviceKey=${process.env.REACT_APP_API_KEY}&numOfRows=9&pageNo=${currentPage}&resultType=json`
+      `https://apis.data.go.kr/6260000/BusanPetAnimalInfoService/getPetAnimalInfo?serviceKey=${process.env.REACT_APP_API_KEY}&numOfRows=9&pageNo=${currentPage}&resultType=json`
     )
       .then((res) => res.json())
       .then((res) => {
