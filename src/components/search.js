@@ -23,7 +23,6 @@ const Search = ({ setSearch }) => {
   const searchClick = () => {
     setSearch(userSearch);
     // setUserSearch("");
-    console.log(userSearch);
   };
 
   const onKeyDown = (e) => {
